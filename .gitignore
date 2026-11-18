@@ -1,0 +1,35 @@
+# ---------- Firmware build output ----------
+Firmware/Debug/*
+!Firmware/Debug/.gitkeep
+Firmware/Release/
+Firmware/SmartDoorLock/.vs/
+Firmware/SmartDoorLock/Debug/
+Firmware/SmartDoorLock/Release/
+*.atsuo
+*.componentinfo.xml
+
+# ---------- Android ----------
+Android/.gradle/
+Android/.kotlin/
+Android/build/
+Android/*/build/
+Android/local.properties
+Android/.idea/
+*.iml
+captures/
+.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ---------- AI model (large / external) ----------
+AI_Model/model/*.onnx
+AI_Model/model/*.ckpt
+AI_Model/data/
+*.wav
+
+# ---------- OS / editors ----------
+.DS_Store
+Thumbs.db
+.vscode/

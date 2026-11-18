@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Bluetooth Classic (SPP / RFCOMM) permissions. No BLE / GATT APIs are used.
+  Android 12+ (API 31+): BLUETOOTH_SCAN (discovery) and BLUETOOTH_CONNECT (paired list,
+  pairing, RFCOMM). "neverForLocation" declares the app does not derive location from scans.
+  Android 11 and older: legacy BLUETOOTH / BLUETOOTH_ADMIN (install-time) and
+  ACCESS_FINE_LOCATION, which Android requires for Classic discovery on those versions.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+</manifest>
