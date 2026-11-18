@@ -8,6 +8,7 @@
 ![Bluetooth](https://img.shields.io/badge/Bluetooth-Classic%20SPP%20(HC--05)-0082FC)
 ![AI](https://img.shields.io/badge/AI-ECAPA--TDNN%20%2F%20ONNX%20Runtime-orange)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
@@ -115,3 +116,7 @@ make fuses && make flash   # USBasp by default: PROGRAMMER=avrispmkII etc.
 - Change the default PIN in `Firmware/Headers/config.h` (`1234` is for testing only). Also change the **HC-05 pairing PIN**, since `VOICE_OK` is plain text.
 - Speaker verification alone can be fooled by a recording, which is why the physical PIN is the second factor.
 - Voice data stays on the phone. It is excluded from Android backup and, from Stage 4, encrypted with an Android Keystore key.
+
+## 📄 License
+
+Released under the [MIT License](LICENSE). The ECAPA-TDNN model weights added in Stage 4 come from a third party and keep their own license.
